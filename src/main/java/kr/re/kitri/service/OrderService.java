@@ -16,9 +16,9 @@ import static kr.re.kitri.util.OrderConstants.USERNAME;
  */
 public class OrderService {
 
-    String query ="select customer.cust_id, customer.username, customer.address, " +
-            "customer.email, orders.order_date, orders.prod_name from customer, " +
-            "orders where customer.cust_id = orders.cust_id";
+    String query ="select a.cust_id, username, address, " +
+            "email, order_date, prod_name from customer a, " +
+            "orders b where a.cust_id = b.cust_id";
 
     //Driver loading
     public OrderService() {
